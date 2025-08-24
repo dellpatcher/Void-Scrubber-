@@ -1,48 +1,21 @@
-Welcome to Parrot OS
+# NetScrubber
 
-Copyright 2013-2020 Lorenzo Faletra <palinuro@parrotsec.org>
-Copyright 2020-2025 Parrot Security CIC  <director@parrotsec.org>
+**NetScrubber** is a Python-based firewall and packet filtering tool using nftables and XDP eBPF. It helps with managing trusted/blacklisted IPs and blocking spoofed traffic on your network.
 
+## Features
+- **Firewall**: Control incoming/outgoing traffic via nftables.
+- **XDP eBPF**: Drop spoofed IPs using XDP.
+- **GUI**: Intuitive Tkinter-based interface for managing the firewall.
+- **Multithreaded**: Non-blocking interface for smooth user experience
 
-This operating system is composed by several programs, each of which
-includes its own license. The GNU/GPL v3 license applies to those
-components developed by Parrot Security when no other license is specified.
+- 
+**NetScrubber** is currently in its **alpha testing** phase. While the core functionality is operational, the tool may still have some bugs, incomplete features, or other issues that could affect its performance. We encourage testers to try out the tool, but please be aware that it is not yet ready for production environments.
 
-By using this system, you accept all the legal constraints and
-license agreements of every single software provided with it,
-and you confirm that you have read and understood the following disclaimer:
+### Known Limitations:
+- **Potential Bugs**: Some features might not work as expected.
+- **Compatibility**: Only tested on Linux systems with `nftables`, `clang`, and `iproute2` installed.
+- **No Guarantee of Stability**: Please use this tool with caution, especially on production systems.
 
+By participating in alpha testing, you help us improve the tool, so we appreciate any feedback or bug reports. 
 
-
-PARROT SECURITY OS INCLUDES SOME SOFTWARE (E.G. MEDIA CODECS ETC.) FOR COUNTRIES
-WHOSE LEGISLATION DOESN'T ALLOW SOFTWARE PATENTS TO BE ENFORCED.
-
-IT IS YOUR RESPONSIBILITY TO KNOW YOUR OWN COUNTRY'S LEGISLATION.
-
-IF YOU LIVE IN A COUNTRY WHERE THE LEGISLATION RECOGNIZES SOFTWARE PATENTS,
-WE ASK YOU NOT TO DOWNLOAD AND/OR USE THIS SOFTWARE.
-
-THIS IS EXPERIMENTAL SOFTWARE PROVIDED WITHOUT ANY WARRANTY AND MADE FOR TESTING
-PURPOSES. USE AT YOUR OWN RISK AND RESPONSIBILITY.
-
-THE PARROT TEAM AND ANY OTHER RELATED PERSON, TEAM, SPONSOR OR PROVIDER CAN NOT
-BE HELD LIABLE UNDER ANY CIRCUMSTANCES FOR DAMAGE TO HARDWARE OR SOFTWARE,
-LOST DATA, CYBERCRIME ACTIVITY OR OTHER DIRECT OR INDIRECT DAMAGE RESULTING
-FROM THE USE OF THIS SYSTEM, THE SOFTWARE PROVIDED IN IT AND ANY OTHER
-SOFTWARE AVAILABLE IN ITS REPOSITORIES OR INSTALLABLE ON IT.
-
-IN SOME COUNTRIES THE CRYPTOGRAPHIC SOFTWARE AND OTHER COMPONENTS MADE AVAILABLE
-THROUGH THE SYSTEM ARE GOVERNED BY EXPORT REGULATIONS AND THUS MAY NOT BE
-FREELY COPIED AS IS OTHERWISE NORMAL FOR SOFTWARE UNDER THE GPL LICENSE.
-IF YOU DO NOT AGREE TO THESE CONDITIONS, YOU ARE NOT PERMITTED TO USE OR FURTHER
-DISTRIBUTE THIS SOFTWARE.
-
-IF YOU PLAN TO COMMERCIALLY USE OR DISTRIBUTE (AND SELL) THE SOFTWARE,
-YOU HAVE TO ACQUIRE THE NECESSARY LICENSES AND PERMISSIONS FROM
-ALL SOFTWARE COPYRIGHT HOLDERS OF NON-FREE SOFTWARE COMPONENTS,
-OR REMOVE THESE COMPONENTS BEFORE DISTRIBUTING THE SYSTEM.
-
-
-
-Parrot GNU/Linux is released under GNU GPL (v3) except
-where another license is explicitly specified.
+Thank you for helping us improve **NetScrubber**!
