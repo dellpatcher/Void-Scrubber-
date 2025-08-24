@@ -1,4 +1,4 @@
-# NetScrubber
+# NetScrubber still being developed. 
 
 **NetScrubber** is a Python-based firewall and packet filtering tool using nftables and XDP eBPF. It helps with managing trusted/blacklisted IPs and blocking spoofed traffic on your network.
 
