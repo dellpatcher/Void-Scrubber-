@@ -1,21 +1,70 @@
-# NetScrubber still being developed. 
+# NetScrubber
 
-**NetScrubber** is a Python-based firewall and packet filtering tool using nftables and XDP eBPF. It helps with managing trusted/blacklisted IPs and blocking spoofed traffic on your network.
+**NetScrubber** is a Python-based advanced firewall and packet filtering tool that combines the power of **nftables** and **XDP eBPF** for high-performance, low-latency network protection.
+
+Designed for home, office, and small business environments, NetScrubber provides a modern GUI, real-time packet scrubbing, and simple management of trusted and blacklisted IPs.
+
 
 ## Features
-- **Firewall**: Control incoming/outgoing traffic via nftables.
-- **XDP eBPF**: Drop spoofed IPs using XDP.
-- **GUI**: Intuitive Tkinter-based interface for managing the firewall.
-- **Multithreaded**: Non-blocking interface for smooth user experience
 
-- 
-**NetScrubber** is currently in its **alpha testing** phase. While the core functionality is operational, the tool may still have some bugs, incomplete features, or other issues that could affect its performance. We encourage testers to try out the tool, but please be aware that it is not yet ready for production environments.
+### Firewall Management
+- Uses a powerful `nftables` ruleset
+- Supports IPv6, rate limiting, anti-spoofing
+- Dynamic management of trusted and blacklisted IPs
 
-### Known Limitations:
-- **Potential Bugs**: Some features might not work as expected.
-- **Compatibility**: Only tested on Linux systems with `nftables`, `clang`, and `iproute2` installed.
-- **No Guarantee of Stability**: Please use this tool with caution, especially on production systems.
+### XDP + eBPF Scrubbing
+- Drops spoofed, malformed, or DDoS-related packets
+- Filters traffic at the kernel level using XDP
+- Compiles eBPF code using `clang` for maximum performance
 
-By participating in alpha testing, you help us improve the tool, so we appreciate any feedback or bug reports. 
+### GUI Interface
+- Intuitive Tkinter-based GUI
+- Real-time management of:
+  - Trusted IPs
+  - Blacklisted IPs
+  - Ruleset viewing
+  - XDP activation
 
-Thank you for helping us improve **NetScrubber**!
+### Multithreaded Design
+- UI stays responsive during firewall operations
+- All commands run in background threads
+
+### Modular Codebase
+- Separated into:
+  - GUI logic
+  - nftables manager
+  - XDP manager
+  - Configuration
+  - Utilities
+  - eBPF source code
+
+
+
+## Disclaimer
+
+NetScrubber is currently in **alpha development**.
+
+> Use with caution in production environments.
+
+### Known limitations:
+- Some features may still be unstable or incomplete
+- Only tested on Linux systems with:
+  - `nftables`
+  - `clang`
+  - `iproute2`
+- Not intended for enterprise use — yet!
+
+---
+
+## Requirements
+
+- Linux (Debian-based recommended)
+- Python 3.6+
+- `nftables`, `iproute2`, `clang`
+- `tkinter` (usually comes with Python)
+- Root privileges
+
+
+
+# Run with root privileges
+sudo python3 main.py
